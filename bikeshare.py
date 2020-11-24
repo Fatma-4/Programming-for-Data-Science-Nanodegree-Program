@@ -6,22 +6,18 @@ CITY_DATA = { 'Chicago': 'chicago.csv','New york city': 'new_york_city.csv','Was
 
 def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
-
     cities = ('Chicago', 'New york city', 'Washington')
     months = ['all','january', 'february', 'march', 'april', 'may', 'june']
     days = ['all','monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday','sunday']
-
 
     while True:
         city = input('Which of these cities do you want to see data : {} \n'.format(cities))
         if city in cities:
             break
-
     while True:
         month = input('Please enter a month to get result {} \n'.format(months))
         if month in months:
             break
-
     while True:
         day = input('Please enter a day to get result {} \n'.format(days))
         if day in days:
@@ -42,11 +38,10 @@ def load_data(city, month, day):
         month = months.index(month) + 1
         df = df[df['month'] == month]
 
-        
     if day != 'all':
         df = df[df['day_of_week'] == day.title()]
     
-    
+    print(city)    
     return df
 
 def time_stats(df):
