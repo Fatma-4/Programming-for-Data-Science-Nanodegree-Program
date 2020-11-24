@@ -38,11 +38,10 @@ def load_data(city, month, day):
         month = months.index(month) + 1
         df = df[df['month'] == month]
 
-        
     if day != 'all':
         df = df[df['day_of_week'] == day.title()]
     
-    
+    print(city)    
     return df
 
 def time_stats(df):
