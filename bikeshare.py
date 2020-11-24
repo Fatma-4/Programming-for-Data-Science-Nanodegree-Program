@@ -22,8 +22,6 @@ def get_filters():
         day = input('Please enter a day to get result {} \n'.format(days))
         if day in days:
             break
-    print(month)
-    print(day)
     
     print('-'*40)
     return city, month, day
